@@ -1,47 +1,55 @@
-# Useful usage related tools for Linux
+# Useful Usage-Related Tools for Linux
 
-1. sysstat
-
+## 1. **sysstat**
+```bash
 apt install sysstat
+```
+Tools provided:
+- `iostat`: Reports CPU statistics and input/output statistics for block devices and partitions.
+- `mpstat`: Reports individual or combined processor-related statistics.
+- `pidstat`: Reports statistics for Linux tasks (processes) such as I/O, CPU, memory, etc.
+- `tapestat`: Reports statistics for tape drives connected to the system.
+- `cifsiostat`: Reports CIFS statistics.
 
-- iostat reports CPU statistics and input/output statistics for block devices and partitions.
-- mpstat reports individual or combined processor related statistics.
-- pidstat reports statistics for Linux tasks (processes) : I/O, CPU, memory, etc.
-- tapestat reports statistics for tape drives connected to the system.
-- cifsiostat reports CIFS statistics.
-
-2. Monitor Network Traffic
-
-sudo aptinstall nethogs
-
-to use it:
+## 2. **Monitor Network Traffic**
+```bash
+sudo apt install nethogs
+```
+To use:
+```bash
 nethogs
+```
 
-3. Monitor CPU Usage and Temps
-
+## 3. **Monitor CPU Usage and Temps**
+```bash
 sudo snap install auto-cpufreq
-
-to monitor cpu:
+```
+To monitor CPU:
+```bash
 sudo auto-cpufreq --monitor
+```
+More info can be found [here](https://github.com/AdnanHodzic/auto-cpufreq).
 
-more info: https://github.com/AdnanHodzic/auto-cpufreq
-
-
-4. Nvme Information
-
+## 4. **NVMe Information**
+```bash
 sudo apt install nvme-cli
+```
+- Get the NVMe lists:
+  ```bash
+  nvme list
+  ```
+- Get specific NVMe information:
+  ```bash
+  sudo nvme smart-log /dev/nvme<id>
+  ```
 
-Get the nvme lists
-
-nvme list
-
-Get the nvme information
-
-sudo nvme smart-log /dev/nvme<id>
-
-5. Check Disk IO
-
+## 5. **Check Disk IO**
+```bash
 sudo apt-get install iotop
-
-use it
+```
+To use:
+```bash
 iotop
+```
+
+--- 
